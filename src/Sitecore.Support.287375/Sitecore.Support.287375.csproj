@@ -42,76 +42,76 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Microsoft.Extensions.DependencyInjection.9.0.1\lib\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.DependencyInjection">
+      <HintPath>..\packages\SC.Microsoft.Extensions.DependencyInjection.9.0.2\lib\Microsoft.Extensions.DependencyInjection.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=1.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Microsoft.Extensions.DependencyInjection.Abstractions.9.0.1\lib\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions">
+      <HintPath>..\packages\SC.Microsoft.Extensions.DependencyInjection.Abstractions.9.0.2\lib\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics, Version=11.18.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.Analytics.9.0.1\lib\Sitecore.Analytics.dll</HintPath>
+    <Reference Include="Sitecore.Analytics">
+      <HintPath>..\packages\SC.Sitecore.Analytics.9.0.2\lib\Sitecore.Analytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics.Aggregation, Version=11.40.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.Analytics.Aggregation.9.0.1\lib\Sitecore.Analytics.Aggregation.dll</HintPath>
+    <Reference Include="Sitecore.Analytics.Aggregation">
+      <HintPath>..\packages\SC.Sitecore.Analytics.Aggregation.9.0.2\lib\Sitecore.Analytics.Aggregation.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Analytics.Model, Version=11.40.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.Analytics.Model.9.0.1\lib\Sitecore.Analytics.Model.dll</HintPath>
+    <Reference Include="Sitecore.Analytics.Model">
+      <HintPath>..\packages\SC.Sitecore.Analytics.Model.9.0.2\lib\Sitecore.Analytics.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.EmailCampaign, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.EmailCampaign.9.0.1\lib\Sitecore.EmailCampaign.dll</HintPath>
+    <Reference Include="Sitecore.EmailCampaign">
+      <HintPath>..\packages\SC.Sitecore.EmailCampaign.9.0.2\lib\Sitecore.EmailCampaign.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.EmailCampaign.ExperienceAnalytics, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.EmailCampaign.ExperienceAnalytics.9.0.1\lib\Sitecore.EmailCampaign.ExperienceAnalytics.dll</HintPath>
+    <Reference Include="Sitecore.EmailCampaign.ExperienceAnalytics">
+      <HintPath>..\packages\SC.Sitecore.EmailCampaign.ExperienceAnalytics.9.0.2\lib\Sitecore.EmailCampaign.ExperienceAnalytics.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.EmailCampaign.Model, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.EmailCampaign.Model.9.0.1\lib\Sitecore.EmailCampaign.Model.dll</HintPath>
+    <Reference Include="Sitecore.EmailCampaign.Model">
+      <HintPath>..\packages\SC.Sitecore.EmailCampaign.Model.9.0.2\lib\Sitecore.EmailCampaign.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.EmailCampaign.XConnect, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.EmailCampaign.XConnect.9.0.1\lib\Sitecore.EmailCampaign.XConnect.dll</HintPath>
+    <Reference Include="Sitecore.EmailCampaign.XConnect">
+      <HintPath>..\packages\SC.Sitecore.EmailCampaign.XConnect.9.0.2\lib\Sitecore.EmailCampaign.XConnect.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.EmailCampaign.XConnect.Web, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.EmailCampaign.XConnect.Web.9.0.1\lib\Sitecore.EmailCampaign.XConnect.Web.dll</HintPath>
+    <Reference Include="Sitecore.EmailCampaign.XConnect.Web">
+      <HintPath>..\packages\SC.Sitecore.EmailCampaign.XConnect.Web.9.0.2\lib\Sitecore.EmailCampaign.XConnect.Web.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExM.Framework, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.ExM.Framework.9.0.1\lib\Sitecore.ExM.Framework.dll</HintPath>
+    <Reference Include="Sitecore.ExM.Framework">
+      <HintPath>..\packages\SC.Sitecore.ExM.Framework.9.0.2\lib\Sitecore.ExM.Framework.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceAnalytics.Aggregation, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Aggregation.9.0.1\lib\Sitecore.ExperienceAnalytics.Aggregation.dll</HintPath>
+    <Reference Include="Sitecore.ExperienceAnalytics.Aggregation">
+      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Aggregation.9.0.2\lib\Sitecore.ExperienceAnalytics.Aggregation.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.ExperienceAnalytics.Core, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Core.9.0.1\lib\Sitecore.ExperienceAnalytics.Core.dll</HintPath>
+    <Reference Include="Sitecore.ExperienceAnalytics.Core">
+      <HintPath>..\packages\SC.Sitecore.ExperienceAnalytics.Core.9.0.2\lib\Sitecore.ExperienceAnalytics.Core.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Framework.Conditions, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.Framework.Conditions.9.0.1\lib\Sitecore.Framework.Conditions.dll</HintPath>
+    <Reference Include="Sitecore.Framework.Conditions">
+      <HintPath>..\packages\SC.Sitecore.Framework.Conditions.9.0.2\lib\Sitecore.Framework.Conditions.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.Kernel, Version=11.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.Kernel.9.0.1\lib\Sitecore.Kernel.dll</HintPath>
+    <Reference Include="Sitecore.Kernel">
+      <HintPath>..\packages\SC.Sitecore.Kernel.9.0.2\lib\Sitecore.Kernel.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XConnect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.XConnect.9.0.1\lib\Sitecore.XConnect.dll</HintPath>
+    <Reference Include="Sitecore.XConnect">
+      <HintPath>..\packages\SC.Sitecore.XConnect.9.0.2\lib\Sitecore.XConnect.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XConnect.Client, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.XConnect.Client.9.0.1\lib\Sitecore.XConnect.Client.dll</HintPath>
+    <Reference Include="Sitecore.XConnect.Client">
+      <HintPath>..\packages\SC.Sitecore.XConnect.Client.9.0.2\lib\Sitecore.XConnect.Client.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="Sitecore.XConnect.Collection.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SC.Sitecore.XConnect.Collection.Model.9.0.1\lib\Sitecore.XConnect.Collection.Model.dll</HintPath>
+    <Reference Include="Sitecore.XConnect.Collection.Model">
+      <HintPath>..\packages\SC.Sitecore.XConnect.Collection.Model.9.0.2\lib\Sitecore.XConnect.Collection.Model.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
