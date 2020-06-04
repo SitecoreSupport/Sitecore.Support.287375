@@ -66,6 +66,10 @@
       <HintPath>..\packages\SC.Sitecore.EmailCampaign.9.0.2\lib\Sitecore.EmailCampaign.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Sitecore.EmailCampaign.Cm, Version=6.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SC.Sitecore.EmailCampaign.Cm.9.0.2\lib\Sitecore.EmailCampaign.Cm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="Sitecore.EmailCampaign.ExperienceAnalytics">
       <HintPath>..\packages\SC.Sitecore.EmailCampaign.ExperienceAnalytics.9.0.2\lib\Sitecore.EmailCampaign.ExperienceAnalytics.dll</HintPath>
       <Private>False</Private>
@@ -128,9 +132,12 @@
     <Compile Include="ByLocation.cs" />
     <Compile Include="ExmDimensionBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveInteraction.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\zzz\Sitecore.Support.287375.config" />
+    <Content Include="App_Config\Include\zzz\Sitecore.Support.287375.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

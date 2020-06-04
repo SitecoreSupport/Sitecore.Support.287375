@@ -4,6 +4,7 @@ namespace Sitecore.Support.EmailCampaign.ExperienceAnalytics.Dimensions
 {
   using Sitecore;
   using Sitecore.Analytics.Lookups;
+  using Sitecore.Analytics.Configuration;
   using Sitecore.Analytics.Model;
   using Sitecore.Diagnostics;
   using Sitecore.EmailCampaign.ExperienceAnalytics;
@@ -45,28 +46,29 @@ namespace Sitecore.Support.EmailCampaign.ExperienceAnalytics.Dimensions
           {
             if (event2 is EmailOpenedEvent)
             {
+
               if (string.IsNullOrEmpty(info.IpAddress))
               {
                 return null;
               }
               try
               {
-                WhoIsInformation whoisInformation = this.GetWhoisInformation(info.IpAddress);
-                if (whoisInformation == null)
+                WhoIsInformation whoIsInformation = GetWhoisInformation(info.IpAddress);
+                if (whoIsInformation != null)
                 {
-                  return null;
+                  country = whoIsInformation.Country;
+                  region = whoIsInformation.Region;
+                  city = whoIsInformation.City;
+                  goto Label_00A7;
                 }
-
-                country = whoisInformation.Country;
-                region = whoisInformation.Region;
-                city = whoisInformation.City;
-                goto Label_00A7;
               }
-              catch (Exception exception)
+              catch (Exception e)
               {
-                _logger.LogError($"Cannot lookup WhoIsInformation for Interaction '{interaction.Id}'", exception);
+                Logger.LogWarn($"Cannot lookup WhoIsInformation for Interaction '{interaction.Id}'", e);
                 return null;
               }
+
+
             }
           }
           else
@@ -79,7 +81,7 @@ namespace Sitecore.Support.EmailCampaign.ExperienceAnalytics.Dimensions
         }
       }
       return null;
-      Label_00A7:
+    Label_00A7:
       if (((country == null) || (region == null)) || (city == null))
       {
         return null;
@@ -88,20 +90,28 @@ namespace Sitecore.Support.EmailCampaign.ExperienceAnalytics.Dimensions
       return new KeyBuilder().Add(num.ToString(CultureInfo.InvariantCulture)).Add(country).Add(region).Add(city).ToString();
     }
 
-    public virtual WhoIsInformation GetWhoisInformation(string ipAddress)
+    public virtual WhoIsInformation GetWhoisInformation([NotNull] string ipAddress)
     {
-      Assert.ArgumentNotNull(ipAddress, "ipAddress");
-
-      var ip = IPAddress.Parse(ipAddress).GetAddressBytes();
-      GeoIpOptions options = new GeoIpOptions
+      Assert.IsNotNull(ipAddress, "ipAddress");
+      IPAddress adress;
+      if (IPAddress.TryParse(ipAddress, out adress))
       {
-        Ip = GeoIpManager.IpHashProvider.ResolveIpAddress(ip),
-        Id = GeoIpManager.IpHashProvider.ComputeGuid(ip),
-        MillisecondsTimeout = -1
-      };
-      var result = GeoIpManager.GetGeoIpData(options);
+        return GetWhoisInformation(adress);
+      }
+      return null;
+    }
 
-      return result.GeoIpData;
+    public virtual WhoIsInformation GetWhoisInformation([NotNull] IPAddress ipAddress)
+    {
+      Assert.IsNotNull(ipAddress, "ipAddress");
+      byte[] addressBytes = ipAddress.GetAddressBytes();
+      var geoIpOptions = new GeoIpOptions
+      {
+        Ip = GeoIpManager.IpHashProvider.ResolveIpAddress(addressBytes),
+        Id = GeoIpManager.IpHashProvider.ComputeGuid(addressBytes),
+        MillisecondsTimeout = (-1)
+      };
+      return GeoIpManager.GetGeoIpData(geoIpOptions).GeoIpData;
     }
   }
 }
